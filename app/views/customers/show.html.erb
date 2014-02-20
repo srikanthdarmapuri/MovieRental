@@ -1,0 +1,25 @@
+<body>
+	<h1>customer</h1>
+	<p>
+	  <strong>name:</strong>
+	  <%= @customer.name %>
+	</p>
+	 
+	<p>
+	  <strong>mobile:</strong>
+	  <%= @customer.mobile %>
+	</p>
+	<p>
+	  <strong>email:</strong>
+	  <%= @customer.email %>
+	</p>
+	 
+	<p>
+	  <strong>address:</strong>
+	  <%= @customer.address %>
+	</p>
+
+
+<%= link_to 'Back', customers_path %><br>
+<%= link_to 'Home', '/welcome/index.html' %>
+</body>

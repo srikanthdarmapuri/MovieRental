@@ -1,0 +1,18 @@
+<h1>Rentals List</h1>
+ 
+<table border="1">
+  <tr>
+    <th>movie name</th>
+    <th>mobile</th>
+  </tr>
+  <% @rentals.each do |rental| %>
+    <tr>
+      <td><%= rental.name %></td>
+      <td><%= rental.mobile %></td>
+      <td><%= link_to 'Destroy', rental_path(rental),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New rental', new_rental_path %><br>
+<%= link_to 'Home', '/welcome/index.html' %>

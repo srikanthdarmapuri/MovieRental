@@ -1,0 +1,25 @@
+<h1>Movie Rental Application</h1>
+<table width = "50%" height = "30%">
+<tr>
+    <td>
+    	<%= link_to "Movies", controller: "movies" %>
+	</td>	
+	<td>
+    	<%= link_to "Customers", controller: "customers" %> 
+	</td>
+	<td>
+    	<%= link_to "Rentals", controller: "rentals" %>
+	</td>
+</tr>
+<tr>
+    <td>
+    	<%= link_to 'New movie', new_movie_path %>
+	</td>	
+	<td>
+    	<%= link_to 'New customer', new_customer_path %>
+	</td>
+	<td>
+    	<%= link_to 'New rental', new_rental_path %>
+	</td>
+</tr>
+</table>

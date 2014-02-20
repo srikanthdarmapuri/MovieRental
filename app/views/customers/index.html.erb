@@ -1,0 +1,22 @@
+<h1>Customer list</h1>
+ 
+<table border="1">
+  <tr>
+    <th>name</th>
+    <th>mobile</th>
+    <th>email</th>
+    <th>address</th>
+  </tr>
+ 
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.mobile %></td>
+      <td><%= customer.email %></td>
+      <td><%= customer.address %></td>
+      
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New customer', new_customer_path %><br>
+<%= link_to 'Home', '/welcome/index.html' %>

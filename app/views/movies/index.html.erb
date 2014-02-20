@@ -1,0 +1,21 @@
+<h1>Movies List</h1>
+ 
+<table border="1">
+  <tr>
+    <th>Movie</th>
+    <th>Language</th>
+    <th>Year</th>
+    <th>Movie type</th>
+  </tr>
+ 
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.name %></td>
+      <td><%= movie.language %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.movie_type %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New movie', new_movie_path %><br>
+<%= link_to 'Home', '/welcome/index.html' %>

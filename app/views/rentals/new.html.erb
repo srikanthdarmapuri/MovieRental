@@ -1,0 +1,36 @@
+<body>
+  <%= yield %> 
+  <h1>New rental</h1>
+  <% if flash[:error] %>
+  <h3><%= flash[:error] %><h3>
+  <% end %>
+  <%= form_for :rental, url: rentals_path do |f| %>
+  <% if @rental.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@rental.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @rental.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>	
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mobile, :maxlength => 10 %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rentals_path %><br>
+<%= link_to 'Home', '/welcome/index.html' %>
+</body>
